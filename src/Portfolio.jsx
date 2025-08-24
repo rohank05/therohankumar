@@ -1,22 +1,40 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Server, Database, Menu } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Server, Database, Menu, Download, Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const projects = [
     {
-      title: "Overay (Backend)",
-      description: "Full-stack e-commerce solution built with React-Native, Node.js, and MongoDB",
-      tech: ["Node.js", "MongoDB", "Express", "GraphQL"],
+      title: "Jikan API Wrapper (jikan-api.js)",
+      description: "Modern TypeScript wrapper library for the Jikan API with 100% test coverage and comprehensive type definitions. Published on NPM with 40+ endpoint methods.",
+      tech: ["TypeScript", "Node.js", "Jest", "NPM Publishing", "JSDoc"],
+      githubLink: "https://github.com/rohank05/jikan-api.js"
+    },
+    {
+      title: "Overay – Node.js Backend",
+      description: "Secure e-commerce backend with multi-method authentication, ShipRocket integration, and REST/GraphQL APIs for scalable operations.",
+      tech: ["Node.js", "Express.js", "MongoDB", "Twilio", "ShipRocket", "GraphQL"],
       liveLink: "https://play.google.com/store/apps/details?id=com.Overay&hl=en_IN",
       githubLink: "https://github.com/rohank05/Overray_Backend"
     },
     {
-      title: "Beat Music",
-      description: "A discord music bot written in Java using JDA and Lavaplayer",
-      tech: ["Java", "Audio-Filter", "JDA", "LavaPlayer"],
+      title: "Sales MCP Server",
+      description: "MySQL integration for AI systems enabling secure database queries through Model Context Protocol for seamless AI-powered sales analytics.",
+      tech: ["Node.js", "TypeScript", "MySQL", "Claude Integration"],
+      githubLink: "https://github.com/rohank05/sales-mcp-server"
+    },
+    {
+      title: "Beat Music – Discord Bot",
+      description: "Scalable music bot in Kotlin with advanced audio filters and playlist management for Discord voice channels.",
+      tech: ["Kotlin", "Discord API", "Audio Processing"],
       githubLink: "https://github.com/OpenianDevelopment/Beat-Music"
+    },
+    {
+      title: "lavadsp-extended",
+      description: "Real-time digital audio processing engine in Java for advanced echo and multi-level reverb effects in live audio streams.",
+      tech: ["Java", "Audio Processing", "Real-time Systems"],
+      githubLink: "https://github.com/rohank05/lavadsp-extended"
     },
     {
       title: "Want to see more?",
@@ -30,22 +48,56 @@ const Portfolio = () => {
   const skills = [
     {
       category: "Frontend",
-      items: ["React", "Next.js", "Vue.js", "Tailwind CSS", "TypeScript"]
+      items: ["React.js", "Next.js", "Vue.js", "Tailwind CSS", "TypeScript"]
     },
     {
       category: "Backend",
-      items: ["Node.js", "Python", "Express", "REST APIs", "Java", ".NET C#"]
+      items: ["Node.js", ".NET (C#)", "Nest.js", "Python", "Java", "Kotlin", "Express", "REST APIs", "GraphQL"]
     },
     {
       category: "Database",
-      items: ["MongoDB", "PostgreSQL", "Redis", "MySQL", "SQL Server", "StarRocks"]
+      items: ["MongoDB", "StarRocks", "MySQL", "SQL Server", "PostgreSQL", "Redis", "ORM"]
     }
   ];
 
   const socialLinks = {
     github: "https://github.com/rohank05",
     linkedin: "https://in.linkedin.com/in/rohank05",
-    email: "rohan.shuvam@gmail.com"
+    email: "mail@therohankumar.com"
+  };
+
+  const experience = {
+    current: {
+      title: "Software Engineer",
+      company: "Spraxa Solutions Pvt. Ltd.",
+      location: "Noida",
+      duration: "Mar 2023 - Present",
+      description: "Specializing in Back-end Development, Real-Time Data Analytics, and Scalable System Architecture",
+      responsibilities: [
+        "Designed and implemented scalable back-end systems using Node.js and JavaScript for real-time data analytics",
+        "Integrated telemetry with core business datasets enabling actionable strategic insights",
+        "Led successful integration of StarRocks database for high-throughput, low-latency analytics",
+        "Automated HR workflows reducing manual effort by 80% and accelerating recruitment processes",
+        "Achieved 70% reduction in API response times through advanced database optimization"
+      ],
+      projects: [
+        {
+          name: "CoolR – Data-driven Analytics Platform",
+          highlights: [
+            "Integrated telemetry data streams with business KPIs",
+            "Developed Missed Opportunity KPI to identify lost sales",
+            "Created Back Storage Model for inventory demand forecasting"
+          ]
+        },
+        {
+          name: "RMS – Resource Management Software",
+          highlights: [
+            "Automated offer letter generation cutting processing time from hours to minutes",
+            "Built email-based daily status tracking system"
+          ]
+        }
+      ]
+    }
   };
 
   return (
@@ -115,10 +167,27 @@ const Portfolio = () => {
             
             {/* Hero Text */}
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Full Stack Developer</h2>
-              <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
-              I am a passionate software developer with expertise across multiple platforms, My journey in the tech world has led me to work with a diverse set of languages, including JavaScript, Java, C#, Python, and Go. 💻 With a knack for problem-solving and a drive for continuous learning.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Software Engineer</h2>
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
+                Highly motivated Software Engineer with 2.5 years of experience specializing in Full-Stack Development using Node.js and JavaScript. Expert in building scalable back-end systems, optimizing database performance, and automating business workflows with proven results in reducing API response times by 70% and manual processes by 80%.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start">
+                <a 
+                  href="/Rohan_Kumar_Resume.pdf"
+                  download="Rohan_Kumar_Resume.pdf"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <Download size={20} />
+                  Download Resume
+                </a>
+                <a 
+                  href={`mailto:${socialLinks.email}`}
+                  className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  <Mail size={20} />
+                  Get in Touch
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -146,6 +215,72 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-12 md:py-16" id="experience">
+        <div className="max-w-6xl mx-auto px-4">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 md:mb-8 text-center md:text-left">Work Experience</h3>
+          
+          <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-start gap-4 mb-6">
+              <div className="flex-shrink-0">
+                <div className="bg-blue-100 p-3 rounded-lg">
+                  <Briefcase className="text-blue-600" size={24} />
+                </div>
+              </div>
+              
+              <div className="flex-grow">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">{experience.current.title}</h4>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
+                  <span className="text-lg font-medium text-blue-600">{experience.current.company}</span>
+                  <div className="flex items-center gap-4 text-gray-600">
+                    <span className="flex items-center gap-1">
+                      <MapPin size={16} />
+                      {experience.current.location}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar size={16} />
+                      {experience.current.duration}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-6">{experience.current.description}</p>
+                
+                <div className="mb-6">
+                  <h5 className="font-semibold text-gray-900 mb-3">Key Responsibilities:</h5>
+                  <ul className="space-y-2">
+                    {experience.current.responsibilities.map((responsibility, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-600">{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold text-gray-900 mb-3">Major Projects:</h5>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {experience.current.projects.map((project, index) => (
+                      <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                        <h6 className="font-medium text-gray-900 mb-2">{project.name}</h6>
+                        <ul className="space-y-1">
+                          {project.highlights.map((highlight, highlightIndex) => (
+                            <li key={highlightIndex} className="text-sm text-gray-600 flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-1.5 flex-shrink-0"></div>
+                              {highlight}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
