@@ -6,9 +6,21 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Jikan API Wrapper (jikan-api.js)",
-      description: "Modern TypeScript wrapper library for the Jikan API with 100% test coverage and comprehensive type definitions. Published on NPM with 40+ endpoint methods.",
-      tech: ["TypeScript", "Node.js", "Jest", "NPM Publishing", "JSDoc"],
+      title: "CoolR - IoT Retail Management Platform",
+      description: "Contributed to BackStorage replenishment algorithm for automated inventory management. Implemented Redis caching and built Self-Serve Import feature for streamlined client onboarding.",
+      tech: ["Node.js", "Redis", "Apache Flink", "StarRocks", "Real-time Analytics"],
+      githubLink: ""
+    },
+    {
+      title: "Beat Music – Discord Bot",
+      description: "Built a Discord music bot deployed to 200+ servers. Implemented audio filters including Echo and Reverb using Kotlin. Designed architecture to handle concurrent music streaming across multiple servers.",
+      tech: ["Kotlin", "Discord API", "Audio Processing"],
+      githubLink: "https://github.com/OpenianDevelopment/Beat-Music"
+    },
+    {
+      title: "jikan-api.js",
+      description: "Created a TypeScript wrapper for the Jikan API covering most endpoints, with type-safe interfaces and error handling. Published as an NPM package with active community usage.",
+      tech: ["TypeScript", "Node.js", "NPM Publishing"],
       githubLink: "https://github.com/rohank05/jikan-api.js"
     },
     {
@@ -25,18 +37,6 @@ const Portfolio = () => {
       githubLink: "https://github.com/rohank05/sales-mcp-server"
     },
     {
-      title: "Beat Music – Discord Bot",
-      description: "Scalable music bot in Kotlin with advanced audio filters and playlist management for Discord voice channels.",
-      tech: ["Kotlin", "Discord API", "Audio Processing"],
-      githubLink: "https://github.com/OpenianDevelopment/Beat-Music"
-    },
-    {
-      title: "lavadsp-extended",
-      description: "Real-time digital audio processing engine in Java for advanced echo and multi-level reverb effects in live audio streams.",
-      tech: ["Java", "Audio Processing", "Real-time Systems"],
-      githubLink: "https://github.com/rohank05/lavadsp-extended"
-    },
-    {
       title: "Want to see more?",
       description: "Head to my GitHub Profile",
       tech: [],
@@ -48,15 +48,19 @@ const Portfolio = () => {
   const skills = [
     {
       category: "Frontend",
-      items: ["React.js", "Next.js", "Vue.js", "Tailwind CSS", "TypeScript"]
+      items: ["React", "Vue.js", "Material-UI", "Tailwind CSS", "TypeScript", "JavaScript"]
     },
     {
       category: "Backend",
-      items: ["Node.js", ".NET (C#)", "Nest.js", "Python", "Java", "Kotlin", "Express", "REST APIs", "GraphQL"]
+      items: ["Node.js", ".NET Core", "Java", "Python", "C#", "REST API", "GraphQL", "Spring Boot"]
     },
     {
-      category: "Database",
-      items: ["MongoDB", "StarRocks", "MySQL", "SQL Server", "PostgreSQL", "Redis", "ORM"]
+      category: "Database & Tools",
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Apache Flink", "StarRocks"]
+    },
+    {
+      category: "Cloud & DevOps",
+      items: ["Azure", "Docker", "Git", "CI/CD Pipelines", "Nginx", "MQTT"]
     }
   ];
 
@@ -68,32 +72,27 @@ const Portfolio = () => {
 
   const experience = {
     current: {
-      title: "Software Engineer",
+      title: "Jr Software Engineer",
       company: "Spraxa Solutions Pvt. Ltd.",
-      location: "Noida",
-      duration: "Mar 2023 - Present",
-      description: "Specializing in Back-end Development, Real-Time Data Analytics, and Scalable System Architecture",
+      location: "Noida Sector 62",
+      duration: "March 2023 – Present",
+      description: "Developing and maintaining full-stack applications with focus on backend optimization and cloud integration",
       responsibilities: [
-        "Designed and implemented scalable back-end systems using Node.js and JavaScript for real-time data analytics",
-        "Integrated telemetry with core business datasets enabling actionable strategic insights",
-        "Led successful integration of StarRocks database for high-throughput, low-latency analytics",
-        "Automated HR workflows reducing manual effort by 80% and accelerating recruitment processes",
-        "Achieved 70% reduction in API response times through advanced database optimization"
+        "Built Excel data import feature for Project CoolR to support faster client onboarding and easier data migration",
+        "Improved API performance by refining SQL queries and database interactions",
+        "Contributed to development of BackStorage replenishment algorithm for inventory management",
+        "Integrated Azure AD authentication to enhance security and enable SSO capabilities",
+        "Assisted in setting up Apache Flink pipeline to sync data with StarRocks for near real-time analytics",
+        "Debugged and resolved production issues, contributing to improved application stability"
       ],
       projects: [
         {
-          name: "CoolR – Data-driven Analytics Platform",
+          name: "CoolR – IoT Retail Management Platform",
           highlights: [
-            "Integrated telemetry data streams with business KPIs",
-            "Developed Missed Opportunity KPI to identify lost sales",
-            "Created Back Storage Model for inventory demand forecasting"
-          ]
-        },
-        {
-          name: "RMS – Resource Management Software",
-          highlights: [
-            "Automated offer letter generation cutting processing time from hours to minutes",
-            "Built email-based daily status tracking system"
+            "Contributed to BackStorage replenishment algorithm for automated inventory management",
+            "Implemented Redis caching to improve application performance",
+            "Built Self-Serve Import feature to streamline client onboarding process",
+            "Assisted in configuring Apache Flink pipeline for real-time data synchronization"
           ]
         }
       ]
@@ -169,7 +168,7 @@ const Portfolio = () => {
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Software Engineer</h2>
               <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
-                Highly motivated Software Engineer with 2.5 years of experience specializing in Full-Stack Development using Node.js and JavaScript. Expert in building scalable back-end systems, optimizing database performance, and automating business workflows with proven results in reducing API response times by 70% and manual processes by 80%.
+                Software Engineer with 2+ years of experience developing and maintaining full-stack applications. Skilled in backend development (Node.js, .NET C#, Java) and frontend frameworks (React, Vue.js). Experienced in building APIs, integrating cloud services, and collaborating in agile teams to deliver reliable features and improve performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start">
                 <a 
@@ -197,13 +196,13 @@ const Portfolio = () => {
       <section className="py-12 md:py-16 bg-white" id="skills">
         <div className="max-w-6xl mx-auto px-4">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 md:mb-8 text-center md:text-left">Skills & Technologies</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {skills.map((skillSet) => (
               <div key={skillSet.category} className="bg-gray-50 p-4 md:p-6 rounded-lg">
                 <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   {skillSet.category === "Frontend" && <Code className="text-blue-500" />}
                   {skillSet.category === "Backend" && <Server className="text-green-500" />}
-                  {skillSet.category === "Database" && <Database className="text-purple-500" />}
+                  {(skillSet.category === "Database & Tools" || skillSet.category === "Cloud & DevOps") && <Database className="text-purple-500" />}
                   {skillSet.category}
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -263,7 +262,7 @@ const Portfolio = () => {
                 
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-3">Major Projects:</h5>
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid gap-4">
                     {experience.current.projects.map((project, index) => (
                       <div key={index} className="bg-gray-50 p-4 rounded-lg">
                         <h6 className="font-medium text-gray-900 mb-2">{project.name}</h6>
@@ -351,7 +350,7 @@ const Portfolio = () => {
       <footer className="bg-gray-50 border-t">
         <div className="max-w-6xl mx-auto px-4 py-6 md:py-8">
           <p className="text-center text-gray-600 text-sm md:text-base">
-            © 2024 Rohan Kumar. All rights reserved.
+            © 2025 Rohan Kumar. All rights reserved.
           </p>
         </div>
       </footer>
