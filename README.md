@@ -1,84 +1,73 @@
-# Rohan Kumar - Portfolio Website
+# React + TypeScript + Vite
 
-A modern, responsive portfolio website built with React + Vite showcasing professional experience, skills, and projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Professional Hero Section** with download resume functionality
-- **Work Experience Section** showcasing current role at Spraxa Solutions with detailed responsibilities and achievements
-- **Skills & Technologies** organized by Frontend, Backend, and Database categories
-- **Featured Projects** from professional and personal development
-- **Responsive Design** optimized for desktop and mobile devices
-- **Resume Download** - Direct PDF download functionality
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## New UI Components Added
+## React Compiler
 
-### Updated Hero Section
-- Professional summary based on resume with 2.5 years of experience highlight
-- **Download Resume** button with download icon
-- **Get in Touch** call-to-action button
-- Enhanced professional description focusing on Node.js and full-stack expertise
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Work Experience Section
-- **Current Role**: Software Engineer at Spraxa Solutions Pvt. Ltd. (Mar 2023 - Present)
-- Location and duration display with icons
-- Key responsibilities with bullet points
-- Major projects breakdown:
-  - **CoolR** - Data-driven Analytics Platform
-  - **RMS** - Resource Management Software
-- Achievement highlights (70% API response time improvement, 80% automation)
-- Professional card-based design with icons and proper spacing
+## Expanding the ESLint configuration
 
-### Enhanced Skills Section
-- Updated technology stack including StarRocks, Kotlin, .NET, Nest.js
-- Added GraphQL and ORM to technical skills
-- Organized skills matching resume structure
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-### Updated Projects Section
-- **Jikan API Wrapper** - TypeScript NPM package
-- **Overay Backend** - E-commerce Node.js backend
-- **Sales MCP Server** - MySQL integration for AI systems
-- **Beat Music** - Discord bot in Kotlin
-- **lavadsp-extended** - Java audio processing engine
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## Tech Stack
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-- **Frontend**: React 18.3.1, Vite 5.4.11
-- **Styling**: Tailwind CSS 3.4.15
-- **Icons**: Lucide React
-- **Development**: ESLint, PostCSS, Autoprefixer
-
-## Development Commands
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Lint code
-npm run lint
-
-# Preview production build
-npm run preview
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-## Website Sections
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-1. **Hero Section** - Professional introduction with resume download
-2. **Skills & Technologies** - Technical expertise organized by category
-3. **Work Experience** - Current role details and achievements
-4. **Featured Projects** - Professional and personal development projects
-5. **Contact** - Get in touch call-to-action
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## Design Principles
-
-- Clean, professional design with consistent spacing
-- Responsive layout for all device sizes
-- Accessible navigation with proper ARIA labels
-- Professional color scheme with blue accents
-- Card-based layouts for better content organization
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
