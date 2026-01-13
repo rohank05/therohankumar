@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { X, Trophy, Crosshair } from 'lucide-react';
 
 interface ContraGameProps {
@@ -10,7 +10,6 @@ const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 400;
 const GRAVITY = 0.6;
 const JUMP_FORCE = -12;
-const SPEED = 5;
 const GROUND_Y = 350;
 
 export function ContraGame({ onClose }: ContraGameProps) {
