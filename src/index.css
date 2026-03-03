@@ -1,70 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;500;700&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Grotesk:wght@300;400;700&family=Fira+Code:wght@400;700&display=swap');
 
 :root {
-  --color-primary: #ff00ff;
-  --color-secondary: #00ffff;
+  /* Colors - NEON & BOLD */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-neon-green: #00ff00;
+  --accent-neon-pink: #ff00ff;
+  --accent-neon-cyan: #00ffff;
+  --accent-neon-yellow: #ffff00;
+
+  /* Neubrutalist Shadows & Borders */
+  --border-width: 4px;
+  --shadow-offset: 8px;
+  --brutalist-shadow: var(--shadow-offset) var(--shadow-offset) 0px #000000;
+  --brutalist-shadow-hover: 4px 4px 0px #000000;
+
+  /* Fonts */
+  --font-heading: 'Unbounded', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  /* Custom Gen Z cursor incoming */
 }
 
 body {
-  @apply bg-dark text-gray-200 font-tech overflow-x-hidden;
-  -webkit-font-smoothing: none;
+  background-color: var(--bg-color);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.5;
 }
 
-/* Custom Retro Effects */
-.scanlines {
-  position: relative;
-  overflow: hidden;
+.dots-bg {
+  background-image: radial-gradient(black 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-.scanlines::before {
-  content: " ";
-  display: block;
+.decoration-sticker {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
-      rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 50;
-  background-size: 100% 2px, 3px 100%;
   pointer-events: none;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 0;
+  opacity: 0.15;
+  user-select: none;
 }
 
-.glow-text {
-  text-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary);
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
 }
 
-.glow-text-secondary {
-  text-shadow: 0 0 5px var(--color-secondary), 0 0 10px var(--color-secondary);
+/* Neubrutalist Utilities */
+.nb-card {
+  background: white;
+  border: var(--border-width) solid black;
+  box-shadow: var(--brutalist-shadow);
+  padding: 2rem;
+  transition: all 0.2s ease;
 }
 
-.pixel-card {
-  @apply bg-black/80 border-2 border-secondary relative backdrop-blur-sm;
-  box-shadow: 4px 4px 0px var(--color-primary);
+.nb-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px #000000;
 }
 
-.pixel-card::after {
-  content: '';
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 8px;
-  height: 8px;
-  @apply bg-accent;
+.nb-button {
+  background: var(--accent-neon-green);
+  border: var(--border-width) solid black;
+  box-shadow: var(--brutalist-shadow);
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: none;
+  display: inline-block;
+  transition: all 0.1s ease;
 }
 
-.btn-retro {
-  @apply bg-transparent border-2 border-primary text-primary font-retro text-xs px-8 py-4 uppercase transition-all duration-200;
-  box-shadow: 0 0 5px var(--color-primary);
+.nb-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px #000000;
+  background: var(--accent-neon-cyan);
 }
 
-.btn-retro:hover {
-  @apply bg-primary text-black transform -translate-y-1;
-  box-shadow: 0 0 20px var(--color-primary);
+.nb-button:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Animations */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.jitter:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+/* Section Spacing */
+section {
+  padding: 6rem 2rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Aura Points Indicator */
+#aura-counter {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent-neon-yellow);
+  border: 4px solid black;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  z-index: 1000;
+  box-shadow: 4px 4px 0px black;
+}
+
+/* Custom Cursor */
+.cursor-blob {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-neon-pink);
+  border: 4px solid black;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+/* Smooth Marquee */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  background: black;
+  color: white;
+  padding: 0.5rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Skills Grid */
+.skills-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
