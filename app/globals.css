@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #0d1117;
+}
+
+/* Custom scrollbar for terminal */
+.terminal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #264f78;
+  color: #e6edf3;
+}
+
+/* Link styling in terminal */
+.terminal-link {
+  color: #58a6ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.terminal-link:hover {
+  color: #79c0ff;
+}
+
+/* ASCII art preservation */
+.ascii-art {
+  white-space: pre;
+  line-height: 1.2;
+}
+
+/* Cursor blink animation */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  background: linear-gradient(90deg, #3fb950 0%, #58a6ff 100%);
+}
+
+/* Typing animation */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
