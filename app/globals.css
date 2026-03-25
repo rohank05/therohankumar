@@ -46,10 +46,21 @@ body {
   color: #58a6ff;
   text-decoration: underline;
   text-underline-offset: 2px;
+  cursor: default;
 }
 
 .terminal-link:hover {
   color: #79c0ff;
+}
+
+/* Show pointer cursor when Ctrl/Cmd is held */
+.ctrl-held .terminal-link {
+  cursor: pointer;
+}
+
+.ctrl-held .terminal-link:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-radius: 2px;
 }
 
 /* ASCII art preservation */

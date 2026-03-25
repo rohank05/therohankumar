@@ -3,6 +3,7 @@ export const personalInfo = {
   title: 'Software Developer',
   email: 'mail@therohankumar.com',
   website: 'therohankumar.com',
+  github: 'rohank05',
   location: 'India',
   bio: 'Full-stack developer with 3+ years of experience building scalable web applications. Passionate about clean code, system design, and creating seamless user experiences.',
 }

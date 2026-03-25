@@ -12,6 +12,7 @@ export default function NeofetchOutput() {
     { label: 'Packages', value: systemInfo.packages },
     { label: 'Memory', value: systemInfo.memory },
     { label: '', value: '' },
+    { label: 'GitHub', value: `@${personalInfo.github}` },
     { label: 'Contact', value: personalInfo.email },
   ]
 

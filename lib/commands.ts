@@ -66,6 +66,12 @@ export const commands: Command[] = [
     description: 'Show command history',
     usage: 'history',
   },
+  {
+    name: 'github',
+    aliases: ['gh'],
+    description: 'Open my GitHub profile',
+    usage: 'github',
+  },
 ]
 
 export const easterEggs: Record<string, string> = {
@@ -84,6 +90,8 @@ export const easterEggs: Record<string, string> = {
   'man': 'Try "help" for a list of available commands.',
   'npm install developer': 'Installing developer... This might take 4 years of college and 3+ years of experience.',
   'git commit -m "hired rohan"': 'Please push this commit! Contact: mail@therohankumar.com',
+  'google rohank05': 'Fun fact: I\'m the top result! Try it: https://google.com/search?q=rohank05',
+  'rohank05': 'That\'s me! Google it - I\'m the top result. GitHub: github.com/rohank05',
 }
 
 export function findCommand(input: string): string | null {

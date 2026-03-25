@@ -183,6 +183,14 @@ export default function Terminal() {
             </div>
           )
           break
+        case 'github':
+          window.open('https://github.com/rohank05', '_blank')
+          output = (
+            <div className="text-terminal-green">
+              Opening GitHub profile... (Fun fact: Google &quot;rohank05&quot; - I&apos;m the top result!)
+            </div>
+          )
+          break
         default:
           output = (
             <div className="text-terminal-red">

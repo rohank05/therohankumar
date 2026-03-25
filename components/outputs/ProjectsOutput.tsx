@@ -1,4 +1,5 @@
 import { projects } from '@/lib/data'
+import TerminalLink from '../TerminalLink'
 
 export default function ProjectsOutput() {
   return (
@@ -21,21 +22,16 @@ export default function ProjectsOutput() {
             </div>
             <div className="mt-1">
               <span className="text-terminal-muted">URL: </span>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="terminal-link"
-              >
+              <TerminalLink href={project.url}>
                 {project.url}
-              </a>
+              </TerminalLink>
             </div>
           </div>
         ))}
       </div>
 
       <div className="mt-4 text-terminal-muted text-sm">
-        Run <span className="text-terminal-accent">'experience'</span> to see my work history.
+        Run <span className="text-terminal-accent">&apos;experience&apos;</span> to see my work history.
       </div>
     </div>
   )

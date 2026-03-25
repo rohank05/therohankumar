@@ -1,4 +1,5 @@
 import { personalInfo } from '@/lib/data'
+import TerminalLink from '../TerminalLink'
 
 export default function ContactOutput() {
   return (
@@ -8,24 +9,24 @@ export default function ContactOutput() {
       <div className="grid gap-3">
         <div className="flex items-center gap-3">
           <span className="text-terminal-green">Email:</span>
-          <a
-            href={`mailto:${personalInfo.email}`}
-            className="terminal-link"
-          >
+          <TerminalLink href={`mailto:${personalInfo.email}`} external={false}>
             {personalInfo.email}
-          </a>
+          </TerminalLink>
         </div>
 
         <div className="flex items-center gap-3">
           <span className="text-terminal-green">Website:</span>
-          <a
-            href={`https://${personalInfo.website}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="terminal-link"
-          >
+          <TerminalLink href={`https://${personalInfo.website}`}>
             {personalInfo.website}
-          </a>
+          </TerminalLink>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <span className="text-terminal-green">GitHub:</span>
+          <TerminalLink href={`https://github.com/${personalInfo.github}`}>
+            github.com/{personalInfo.github}
+          </TerminalLink>
+          <span className="text-terminal-muted text-sm">(Google &quot;rohank05&quot;)</span>
         </div>
       </div>
 
@@ -37,7 +38,7 @@ export default function ContactOutput() {
       </div>
 
       <div className="mt-4 text-terminal-muted text-sm">
-        Tip: Try <span className="text-terminal-accent">'sudo hire-me'</span> for a surprise.
+        Tip: Hold <span className="text-terminal-accent">Ctrl</span> and click links to open them.
       </div>
     </div>
   )

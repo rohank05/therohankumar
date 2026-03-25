@@ -19,8 +19,12 @@ export default function HelpOutput() {
         ))}
       </div>
       <div className="mt-4 text-terminal-muted text-sm">
-        Tip: Use <span className="text-terminal-accent">Tab</span> for auto-completion,
-        <span className="text-terminal-accent"> ↑/↓</span> for command history
+        <div>
+          Tip: Use <span className="text-terminal-accent">Tab</span> for auto-completion, <span className="text-terminal-accent">↑/↓</span> for command history
+        </div>
+        <div className="mt-1">
+          Hold <span className="text-terminal-accent">Ctrl</span> (or <span className="text-terminal-accent">Cmd</span>) + Click to open links
+        </div>
       </div>
     </div>
   )
