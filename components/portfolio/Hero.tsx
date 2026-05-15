@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="meta-grid reveal">
         <div className="cell">
           <div className="label">CURRENTLY</div>
-          <div className="val">Jr. SWE @ NovoStack</div>
+          <div className="val">SDE 1 @ NovoStack</div>
         </div>
         <div className="cell">
           <div className="label">FOCUS</div>

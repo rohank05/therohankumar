@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     when: '2025 — Present',
-    role: 'Jr. Software Engineer',
+    role: 'SDE 1',
     company: 'NovoStack',
     where: 'Noida',
     bullets: [
@@ -101,7 +101,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     when: '2023 — 2025',
-    role: 'Jr. Software Engineer',
+    role: 'SDE 1',
     company: 'Spraxa Solutions',
     where: 'Noida, Sector 62',
     bullets: [
