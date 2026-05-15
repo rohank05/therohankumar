@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <div className="cell">
           <div className="label">BASED IN</div>
-          <div className="val">Delhi, IN · {time} IST</div>
+          <div className="val" suppressHydrationWarning>Delhi, IN · {time} IST</div>
         </div>
         <div className="cell">
           <div className="label">SHIPPING SINCE</div>

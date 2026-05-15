@@ -23,7 +23,7 @@ export default function Contact() {
       </a>
 
       <div className="foot">
-        <div>© {new Date().getFullYear()} ROHAN KUMAR · DELHI, IN</div>
+        <div suppressHydrationWarning>© {new Date().getFullYear()} ROHAN KUMAR · DELHI, IN</div>
         <div className="links">
           <a href="https://github.com/rohank05" target="_blank" rel="noreferrer">GITHUB</a>
           <a href="https://linkedin.com/in/rohank05" target="_blank" rel="noreferrer">LINKEDIN</a>

@@ -687,3 +687,185 @@ body::before {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* === Responsive: Tablet (769px – 1024px) === */
+@media (max-width: 1024px) {
+  .work-row { grid-template-columns: 48px 1.5fr 2fr 28px; }
+  .work-row .stack { display: none; }
+  .exp-item { grid-template-columns: 160px 1fr; gap: 24px; }
+  .exp-item .where { display: none; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* === Responsive: Mobile (≤768px) === */
+@media (max-width: 768px) {
+
+  /* Shell — enough breathing room from edges */
+  .shell { padding: 0 24px; }
+
+  /* Topbar — compact, just the essentials */
+  .topbar { padding: 16px 24px; font-size: 11px; }
+  .topbar .left { gap: 10px; }
+  .topbar .right { gap: 20px; }
+  .topbar .hide-sm { display: none; }
+
+  /* Hero — natural height, no forced viewport fill */
+  .hero {
+    min-height: unset;
+    padding: 90px 0 52px;
+    justify-content: flex-start;
+  }
+  .hero .eyebrow { margin-bottom: 24px; font-size: 11px; }
+  .hero h1 { margin-bottom: 24px; }
+  .hero .lede {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+  .hero .meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+    padding: 20px 0;
+    margin-top: 0;
+  }
+  .hero .meta-grid .cell .label { font-size: 10px; margin-bottom: 6px; }
+  .hero .meta-grid .cell .val { font-size: 14px; }
+
+  /* Section */
+  .section { padding: 64px 0; }
+  .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 32px; }
+  .section-head h2 { font-size: clamp(30px, 8vw, 44px); }
+
+  /* ── Work — rethought for mobile ──
+     Drop the number column. Each project is a full-width
+     block: title + arrow on top, description below, tags below that.
+     People scan by name, not index number. */
+  .work-preview { display: none; }
+  .work-list { border-top: 1px solid var(--line); }
+  .work-row {
+    display: block;           /* abandon grid entirely */
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+    cursor: auto;
+    position: relative;
+  }
+  .work-row::before { display: none; }
+  .work-row:hover { padding-left: 0; }
+  .work-row:hover .arrow { transform: none; color: var(--fg-dim); }
+
+  .work-row .num { display: none; }   /* remove index — nobody counts on phone */
+
+  .work-row .title {
+    font-size: 22px;
+    line-height: 1.15;
+    padding-right: 36px;     /* space for arrow */
+    margin-bottom: 10px;
+  }
+  .work-row .title em { display: block; font-size: 14px; margin-top: 2px; }
+
+  .work-row .arrow {
+    position: absolute;
+    top: 24px; right: 0;
+    font-size: 20px;
+    transition: none;
+  }
+
+  .work-row .desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--fg-dim);
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .work-row .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+  .work-row .stack span { font-size: 10px; padding: 4px 8px; }
+
+  /* ── Experience — scannable on phone ── */
+  .exp-list { gap: 0; }
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 28px 0;
+  }
+  .exp-item .where { display: none; }
+  .exp-item .when {
+    font-size: 11px;
+    color: var(--fg-low);
+    margin-bottom: 6px;
+  }
+  .exp-item .role {
+    font-size: 24px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .exp-item .company {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  .exp-item ul { gap: 8px; }
+  .exp-item ul li { font-size: 14px; line-height: 1.5; }
+
+  /* ── Skills ── */
+  .skills-marquee { padding: 20px 0; margin: 20px -24px; padding-left: 24px; }
+  .skills-marquee .track { font-size: 30px; gap: 20px; }
+  .skills-marquee .track span { gap: 20px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .skills-grid .group .label { font-size: 10px; margin-bottom: 12px; padding-bottom: 10px; }
+  .skills-grid .group li { font-size: 14px; }
+
+  /* Education */
+  .edu-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 48px; }
+  .edu-card h3 { font-size: 19px; }
+  .edu-card p { font-size: 13px; }
+
+  /* ── Contact ── */
+  .contact { padding: 64px 0 48px; }
+  .contact .section-head {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 32px;
+  }
+  .contact .section-head > div:last-child { display: none; }
+  .contact .big {
+    font-size: clamp(38px, 10.5vw, 64px);
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+  .contact .email-link {
+    font-size: clamp(16px, 5vw, 26px);
+    gap: 10px;
+    padding-bottom: 10px;
+    word-break: break-all;  /* prevent email overflow */
+  }
+
+  /* Footer */
+  .foot {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 48px;
+    padding: 28px 0;
+  }
+  .foot .links { justify-content: flex-start; gap: 20px; }
+  .foot .right { text-align: left; }
+}
+
+/* === Small phones (≤400px) — even tighter, remove cruft === */
+@media (max-width: 400px) {
+  .shell { padding: 0 20px; }
+  .topbar .left > span:nth-child(2),
+  .topbar .left > span:nth-child(3) { display: none; } /* hide "/ Software Engineer" */
+  .hero h1 { font-size: clamp(44px, 14vw, 72px); }
+  .hero .meta-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .work-row .title { font-size: 20px; }
+  .skills-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+}

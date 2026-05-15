@@ -19,7 +19,7 @@ export default function TopBar() {
         <a href="#contact">Contact</a>
         <span className="status hide-sm">
           <span className="dot" />
-          <span>DEL · {time}</span>
+          <span suppressHydrationWarning>DEL · {time}</span>
         </span>
       </div>
     </div>
