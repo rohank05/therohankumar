@@ -1,11 +1,5 @@
-'use client'
-
-import Terminal from '@/components/Terminal'
+import PortfolioClient from '@/components/portfolio/PortfolioClient'
 
 export default function Home() {
-  return (
-    <main className="h-screen w-screen overflow-hidden">
-      <Terminal />
-    </main>
-  )
+  return <PortfolioClient />
 }
