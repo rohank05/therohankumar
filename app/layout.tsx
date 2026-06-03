@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import ClarityInit from '@/components/ClarityInit'
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -86,7 +87,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${instrumentSerif.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <ClarityInit />
+        {children}
+      </body>
     </html>
   )
 }
