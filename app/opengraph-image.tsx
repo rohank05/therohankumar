@@ -2,12 +2,62 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'Rohan Kumar - Software Developer'
+export const alt = 'Rohan Kumar — Software Engineer'
 export const size = {
   width: 1200,
   height: 630,
 }
 export const contentType = 'image/png'
+
+const lid = '#2B34E0'
+const vinyl = '#FFFDF6'
+const ink = '#14112B'
+
+function Sticker({
+  children,
+  bg,
+  color = ink,
+  rotate,
+  top,
+  left,
+  radius = 999,
+  size = 34,
+  pad = '14px 28px',
+}: {
+  children: React.ReactNode
+  bg: string
+  color?: string
+  rotate: number
+  top: number
+  left: number
+  radius?: number
+  size?: number
+  pad?: string
+}) {
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top,
+        left,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: bg,
+        color,
+        border: `8px solid ${vinyl}`,
+        borderRadius: radius,
+        padding: pad,
+        fontSize: size,
+        fontWeight: 800,
+        transform: `rotate(${rotate}deg)`,
+        boxShadow: '0 14px 24px -10px rgba(20,17,43,0.6)',
+      }}
+    >
+      {children}
+    </div>
+  )
+}
 
 export default async function Image() {
   return new ImageResponse(
@@ -17,68 +67,30 @@ export default async function Image() {
           height: '100%',
           width: '100%',
           display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: '#0d1117',
-          padding: '40px 60px',
-          fontFamily: 'monospace',
+          position: 'relative',
+          background: lid,
         }}
       >
-        {/* Terminal Header */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            marginBottom: '20px',
-          }}
-        >
-          <div style={{ width: '14px', height: '14px', borderRadius: '50%', backgroundColor: '#f85149' }} />
-          <div style={{ width: '14px', height: '14px', borderRadius: '50%', backgroundColor: '#d29922' }} />
-          <div style={{ width: '14px', height: '14px', borderRadius: '50%', backgroundColor: '#3fb950' }} />
-          <span style={{ color: '#7d8590', marginLeft: '12px', fontSize: '18px' }}>
-            rohan@portfolio: ~
-          </span>
-        </div>
-
-        {/* Terminal Content */}
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center' }}>
-          {/* ASCII Name */}
-          <pre
-            style={{
-              color: '#58a6ff',
-              fontSize: '28px',
-              lineHeight: 1.2,
-              margin: 0,
-            }}
-          >
-{`  ____       _                   _  __
- |  _ \\ ___ | |__   __ _ _ __   | |/ /   _ _ __ ___   __ _ _ __
- | |_) / _ \\| '_ \\ / _\` | '_ \\  | ' / | | | '_ \` _ \\ / _\` | '__|
- |  _ < (_) | | | | (_| | | | | | . \\ |_| | | | | | | (_| | |
- |_| \\_\\___/|_| |_|\\__,_|_| |_| |_|\\_\\__,_|_| |_| |_|\\__,_|_|`}
-          </pre>
-
-          <div style={{ marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <div style={{ display: 'flex', color: '#e6edf3', fontSize: '32px' }}>
-              <span style={{ color: '#3fb950' }}>$</span>
-              <span style={{ marginLeft: '12px' }}>Software Developer</span>
-            </div>
-            <div style={{ display: 'flex', color: '#7d8590', fontSize: '24px' }}>
-              <span style={{ color: '#3fb950' }}>$</span>
-              <span style={{ marginLeft: '12px' }}>Go | React | Next.js | TypeScript | NestJS</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', color: '#7d8590', fontSize: '20px' }}>
-          <span>therohankumar.com</span>
-          <span>Type &apos;help&apos; to explore</span>
-        </div>
+        <Sticker bg="#FFE03D" rotate={-5} top={70} left={60} radius={36} size={150} pad="0px 40px 10px">
+          ROHAN
+        </Sticker>
+        <Sticker bg="#FF8AD1" rotate={3} top={270} left={170} radius={36} size={150} pad="0px 40px 10px">
+          KUMAR
+        </Sticker>
+        <Sticker bg="#3EE08F" rotate={6} top={70} left={840} size={30}>
+          SDE 1 @ NovoStack
+        </Sticker>
+        <Sticker bg="#FF5A36" rotate={-4} top={500} left={90} size={30}>
+          Node · Go · React · Next.js
+        </Sticker>
+        <Sticker bg={ink} color="#FFE03D" rotate={-8} top={440} left={820} radius={24} size={30}>
+          5,000+ npm dl / week
+        </Sticker>
+        <Sticker bg={vinyl} rotate={4} top={500} left={640} size={26}>
+          therohankumar.com
+        </Sticker>
       </div>
     ),
-    {
-      ...size,
-    }
+    { ...size }
   )
 }

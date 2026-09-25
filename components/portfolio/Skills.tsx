@@ -1,74 +1,97 @@
-import { SKILLS, MARQUEE_TERMS } from '@/lib/data'
+import type { CSSProperties } from 'react'
+import Burst from './Burst'
+import { EDUCATION, MARQUEE_TERMS, SKILLS, type Face, type Skin } from '@/lib/data'
+
+const BELT_SKINS: Skin[] = ['lid', 'tomato', 'vinyl', 'pink', 'ink', 'yellow']
+const BELT_FACES: Face[] = ['bagel', 'bungee', 'shrikhand', 'rubik', 'bagel', 'mono']
+const TAPES: Skin[] = ['ink', 'lid', 'tomato', 'pink']
+const EDU_SKINS: Skin[] = ['vinyl', 'pink', 'lid']
+
+function Belt({ terms, reverse }: { terms: string[]; reverse?: boolean }) {
+  const doubled = [...terms, ...terms]
+  return (
+    <div className={`belt${reverse ? ' reverse' : ''}`} aria-hidden="true">
+      <div className="track">
+        {doubled.map((t, i) => (
+          <span
+            key={i}
+            className={`stk belt-item skin-${BELT_SKINS[i % BELT_SKINS.length]} face-${BELT_FACES[(i + (reverse ? 3 : 0)) % BELT_FACES.length]}`}
+            style={{ '--r': `${i % 2 ? 3 : -3}deg` } as CSSProperties}
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function Skills() {
-  const terms = [...MARQUEE_TERMS, ...MARQUEE_TERMS]
+  const half = Math.ceil(MARQUEE_TERMS.length / 2)
 
   return (
-    <section className="section shell" id="about">
-      <div className="section-head">
-        <div className="label reveal">
-          <span className="num">04</span>TOOLKIT
-        </div>
-        <h2 className="reveal">
-          The stack I <em>reach for</em>.
+    <section className="kit" id="toolkit" aria-labelledby="kit-title">
+      <div className="wrap">
+        <h2 id="kit-title" className="sec-title">
+          The stack I{' '}
+          <span className="stk tagword skin-tomato" style={{ '--r': '-2deg' } as CSSProperties}>reach for</span>.
         </h2>
       </div>
 
-      <div className="skills-marquee reveal">
-        <div className="track">
-          {terms.map((t, i) => (
-            <span key={i}>
-              {t}
-              <span className="dot" />
-            </span>
+      <div className="belts">
+        <Belt terms={MARQUEE_TERMS.slice(0, half)} />
+        <Belt terms={MARQUEE_TERMS.slice(half)} reverse />
+      </div>
+
+      <div className="wrap">
+        <div className="groups">
+          {Object.entries(SKILLS).map(([group, items], i) => (
+            <div key={group} className="group">
+              <h3
+                className={`dymo skin-${TAPES[i]}`}
+                style={{ '--r': `${i % 2 ? 1.5 : -1.5}deg`, '--d': `${i * 120}ms` } as CSSProperties}
+                data-rv="unroll"
+              >
+                {group}
+              </h3>
+              <ul className="tapes">
+                {items.map((s, j) => (
+                  <li
+                    key={s}
+                    className={`dymo small skin-${TAPES[i]}`}
+                    style={{ '--r': `${[0.8, -1.2, 1.4, -0.6, 1, -1.5][j % 6]}deg` } as CSSProperties}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
-      </div>
 
-      <div className="skills-grid">
-        {Object.entries(SKILLS).map(([group, items]) => (
-          <div key={group} className="group reveal">
-            <div className="label">{group.toUpperCase()}</div>
-            <ul>
-              {items.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      <div style={{ marginTop: 80 }}>
-        <div style={{
-          fontFamily: 'var(--mono)',
-          fontSize: 11,
-          color: 'var(--fg-low)',
-          marginBottom: 24,
-          letterSpacing: '0.05em',
-        }}>
-          EDUCATION &amp; CERTIFICATIONS
-        </div>
+        <h3 className="sub-title">School &amp; certificates</h3>
         <div className="edu-grid">
-          <div className="edu-card reveal">
-            <div className="when">2025 — PRESENT</div>
-            <h3>Master of Computer Applications</h3>
-            <p>Manipal University Jaipur · Remote</p>
-          </div>
-          <div className="edu-card reveal">
-            <div className="when">2019 — 2024</div>
-            <h3>Bachelor of Computer Applications</h3>
-            <p>Indira Gandhi National Open University · Remote</p>
-          </div>
-          <div className="edu-card reveal">
-            <div className="when">JAN 2023</div>
-            <h3>Supervised Machine Learning</h3>
-            <p>Coursera · Regression &amp; Classification</p>
-          </div>
-          <div className="edu-card reveal">
-            <div className="when">2024</div>
-            <h3>Tackling Challenges with Confidence</h3>
-            <p>Spraxa Solutions Pvt. Ltd. — Internal Award</p>
-          </div>
+          {EDUCATION.map((e, i) => {
+            const style = { '--r': `${[-1.6, 1.2, -2.5, 6][i]}deg`, '--d': `${i * 90}ms` } as CSSProperties
+            if (i === 3)
+              return (
+                <div key={e.title} className="edu-award" style={style} data-rv="slap">
+                  <Burst fill="var(--yellow)" />
+                  <div>
+                    <span className="when">{e.when}</span>
+                    <h4>{e.title}</h4>
+                    <p>{e.where}</p>
+                  </div>
+                </div>
+              )
+            return (
+              <div key={e.title} className={`stk edu edu-${i} skin-${EDU_SKINS[i]}`} style={style} data-rv="slap">
+                <span className="when">{e.when}</span>
+                <h4>{e.title}</h4>
+                <p>{e.where}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

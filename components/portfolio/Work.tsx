@@ -1,159 +1,76 @@
-'use client'
+import type { CSSProperties } from 'react'
+import { PROJECTS, type Skin } from '@/lib/data'
+import { ArrowUpRight, Lock } from './Icons'
 
-import { useRef, useState, useEffect } from 'react'
-import { PROJECTS, type Project } from '@/lib/data'
-
-function PreviewCard({
-  project,
-  loaded,
-  onLoad,
-}: {
-  project: Project
-  loaded: boolean
-  onLoad: () => void
-}) {
-  const host = project.preview
-    ? new URL(project.preview).hostname.replace(/^www\./, '')
-    : null
-
-  if (project.kind === 'npm' && project.npm) {
-    return (
-      <>
-        <div className="badge">NPM · LIVE</div>
-        <div className="npm-card">
-          <div className="top">
-            <div className="npm-logo">npm</div>
-            <div style={{ fontSize: 10, color: 'var(--fg-low)' }}>npmjs.com</div>
-          </div>
-          <div>
-            <div className="pkg-name">{project.npm.name}</div>
-            <div className="pkg-sub">TypeScript wrapper for the Jikan API</div>
-            <div className="stats">
-              <div className="stat">
-                <div className="k">WEEKLY DL</div>
-                <div className="v">{project.npm.downloads}</div>
-              </div>
-              <div className="stat">
-                <div className="k">TYPE</div>
-                <div className="v">{project.npm.version}</div>
-              </div>
-            </div>
-          </div>
-          <code>$ npm i {project.npm.name}</code>
-        </div>
-      </>
-    )
-  }
-
-  if (project.preview) {
-    return (
-      <>
-        <div className="badge">LIVE</div>
-        <div className="iframe-wrap">
-          <iframe
-            src={project.preview}
-            loading="lazy"
-            sandbox="allow-scripts allow-same-origin"
-            referrerPolicy="no-referrer"
-            onLoad={onLoad}
-          />
-          <div className={`loading${loaded ? ' hidden' : ''}`}>LOADING PREVIEW…</div>
-        </div>
-        <div className="meta">
-          <div className="title">{project.title}</div>
-          <div className="host">{host} ↗</div>
-        </div>
-      </>
-    )
-  }
-
-  return (
-    <div
-      className="fallback"
-      style={{ background: `linear-gradient(135deg, ${project.tone} 0%, var(--bg-2) 100%)` }}
-    >
-      <div>PRIVATE · NO PREVIEW</div>
-      <div>
-        <div className="title">{project.title}</div>
-        <div className="sub">{project.italic}</div>
-      </div>
-    </div>
-  )
+// The corner badge always contrasts with the sticker it sits on
+const BADGE: Record<Skin, Skin> = {
+  lid: 'yellow',
+  tomato: 'vinyl',
+  yellow: 'ink',
+  mint: 'pink',
+  pink: 'mint',
+  ink: 'yellow',
+  vinyl: 'tomato',
 }
+const TILT = [-1.4, 1.1, 1.6, -1.2, 0.8, -0.6]
 
 export default function Work() {
-  const previewRef = useRef<HTMLDivElement>(null)
-  const [hoverIdx, setHoverIdx] = useState(-1)
-  const [loadedSet, setLoadedSet] = useState<Record<string, boolean>>({})
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      const el = previewRef.current
-      if (!el) return
-      const cardW = 420, cardH = 290, gap = 24
-      let x = e.clientX + gap
-      let y = e.clientY
-      if (x + cardW > window.innerWidth - 16) x = e.clientX - cardW - gap
-      const minY = cardH / 2 + 16
-      const maxY = window.innerHeight - cardH / 2 - 16
-      y = Math.max(minY, Math.min(maxY, y))
-      el.style.left = x + 'px'
-      el.style.top = y + 'px'
-      el.style.transform = el.classList.contains('visible')
-        ? 'translate(0, -50%) scale(1)'
-        : 'translate(0, -50%) scale(0.94)'
-    }
-    window.addEventListener('mousemove', onMove)
-    return () => window.removeEventListener('mousemove', onMove)
-  }, [])
-
-  const project = hoverIdx >= 0 ? PROJECTS[hoverIdx] : null
-
   return (
-    <section className="section shell" id="work">
-      <div className="section-head">
-        <div className="label reveal">
-          <span className="num">02</span>SELECTED WORK
-        </div>
-        <h2 className="reveal">
-          Things I&apos;ve <em>built</em>,<br />shipped &amp; maintained.
+    <section className="sheet" id="work" aria-labelledby="work-title">
+      <div className="wrap">
+        <h2 id="work-title" className="sec-title">
+          Things I&apos;ve{' '}
+          <span className="stk tagword skin-lid" style={{ '--r': '-3deg' } as CSSProperties}>built</span>,
+          shipped &amp; maintained.
         </h2>
-      </div>
+        <p className="sec-lede">
+          Six stickers off the sheet: products in production, client builds, and open source.
+          Peel the live ones to visit.
+        </p>
 
-      <div className="work-list">
-        {PROJECTS.map((p, i) => (
-          <a
-            key={p.id}
-            href={p.href}
-            target={p.href.startsWith('http') ? '_blank' : undefined}
-            rel="noreferrer"
-            className="work-row reveal"
-            onMouseEnter={() => setHoverIdx(i)}
-            onMouseLeave={() => setHoverIdx(-1)}
-          >
-            <div className="num">0{i + 1}</div>
-            <div className="title">
-              {p.title} <em>— {p.italic}</em>
-            </div>
-            <div className="desc">{p.desc}</div>
-            <div className="stack">
-              {p.stack.map((s) => (
-                <span key={s}>{s}</span>
-              ))}
-            </div>
-            <div className="arrow">↗</div>
-          </a>
-        ))}
-      </div>
-
-      <div ref={previewRef} className={`work-preview${project ? ' visible' : ''}`}>
-        {project && (
-          <PreviewCard
-            project={project}
-            loaded={!!loadedSet[project.id]}
-            onLoad={() => setLoadedSet((s) => ({ ...s, [project.id]: true }))}
-          />
-        )}
+        <div className="proj-grid">
+          {PROJECTS.map((p, i) => {
+            const live = p.href.startsWith('http')
+            const style = { '--r': `${TILT[i]}deg`, '--d': `${(i % 3) * 90}ms` } as CSSProperties
+            const body = (
+              <>
+                <span className={`stk badge skin-${BADGE[p.skin]}`}>{p.fact}</span>
+                <h3 className={`proj-title face-${p.face}`}>{p.title}</h3>
+                <p className="proj-sub">{p.italic}</p>
+                <p className="proj-desc">{p.desc}</p>
+                <div className="proj-foot">
+                  <ul className="chips" aria-label="Stack">
+                    {p.stack.map((s) => (
+                      <li key={s}>{s}</li>
+                    ))}
+                  </ul>
+                  {live ? (
+                    <span className="go" aria-hidden="true">
+                      <ArrowUpRight size={24} />
+                    </span>
+                  ) : (
+                    <span className="private">
+                      <Lock size={15} /> Private build
+                    </span>
+                  )}
+                </div>
+              </>
+            )
+            const cls = `stk proj skin-${p.skin} span-${i}`
+            return live ? (
+              <a key={p.id} href={p.href} target="_blank" rel="noreferrer" className={`${cls} peel`} style={style} data-rv="slap">
+                {body}
+              </a>
+            ) : (
+              <article key={p.id} className={cls} style={style} data-rv="slap">
+                {body}
+              </article>
+            )
+          })}
+          <div className="slot" aria-hidden="true">
+            <span>peeled off, it&apos;s on the lid now</span>
+          </div>
+        </div>
       </div>
     </section>
   )

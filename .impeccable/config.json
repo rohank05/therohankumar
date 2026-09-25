@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "bounce-easing",
+        "value": "cubic-bezier(0.2, 1.5, 0.35, 1)",
+        "createdAt": "2026-09-24T18:13:13.662Z",
+        "reason": "model decision: the overshoot is the direction contract's named 'slap' motion (sticker landing), chosen direction 3355daca"
+      }
+    ]
+  }
+}

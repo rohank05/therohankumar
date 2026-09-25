@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T18:27:57+00:00",
+  "title": "Design System: Rohan Kumar",
+  "extensions": {
+    "colorMeta": {
+      "lid": {
+        "role": "primary",
+        "displayName": "Laptop-Lid Ultramarine",
+        "canonical": "oklch(46.1% 0.250 269.3)",
+        "tonalRamp": [
+          "oklch(15% 0.200 269.3)",
+          "oklch(25% 0.250 269.3)",
+          "oklch(35% 0.250 269.3)",
+          "oklch(45% 0.250 269.3)",
+          "oklch(55% 0.250 269.3)",
+          "oklch(65% 0.250 269.3)",
+          "oklch(80% 0.250 269.3)",
+          "oklch(95% 0.200 269.3)"
+        ]
+      },
+      "lid-deep": {
+        "role": "primary",
+        "displayName": "Deep Lid",
+        "canonical": "oklch(39.4% 0.218 268.8)",
+        "tonalRamp": [
+          "oklch(15% 0.200 268.8)",
+          "oklch(25% 0.218 268.8)",
+          "oklch(35% 0.218 268.8)",
+          "oklch(45% 0.218 268.8)",
+          "oklch(55% 0.218 268.8)",
+          "oklch(65% 0.218 268.8)",
+          "oklch(80% 0.218 268.8)",
+          "oklch(95% 0.200 268.8)"
+        ]
+      },
+      "tomato": {
+        "role": "secondary",
+        "displayName": "Tomato",
+        "canonical": "oklch(68.4% 0.207 33.9)",
+        "tonalRamp": [
+          "oklch(15% 0.200 33.9)",
+          "oklch(25% 0.207 33.9)",
+          "oklch(35% 0.207 33.9)",
+          "oklch(45% 0.207 33.9)",
+          "oklch(55% 0.207 33.9)",
+          "oklch(65% 0.207 33.9)",
+          "oklch(80% 0.207 33.9)",
+          "oklch(95% 0.200 33.9)"
+        ]
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "Acid Yellow",
+        "canonical": "oklch(90.6% 0.171 97.8)",
+        "tonalRamp": [
+          "oklch(15% 0.171 97.8)",
+          "oklch(25% 0.171 97.8)",
+          "oklch(35% 0.171 97.8)",
+          "oklch(45% 0.171 97.8)",
+          "oklch(55% 0.171 97.8)",
+          "oklch(65% 0.171 97.8)",
+          "oklch(80% 0.171 97.8)",
+          "oklch(95% 0.171 97.8)"
+        ]
+      },
+      "mint": {
+        "role": "tertiary",
+        "displayName": "Mint",
+        "canonical": "oklch(80.5% 0.175 156.3)",
+        "tonalRamp": [
+          "oklch(15% 0.175 156.3)",
+          "oklch(25% 0.175 156.3)",
+          "oklch(35% 0.175 156.3)",
+          "oklch(45% 0.175 156.3)",
+          "oklch(55% 0.175 156.3)",
+          "oklch(65% 0.175 156.3)",
+          "oklch(80% 0.175 156.3)",
+          "oklch(95% 0.175 156.3)"
+        ]
+      },
+      "pink": {
+        "role": "tertiary",
+        "displayName": "Bubblegum Pink",
+        "canonical": "oklch(78.2% 0.163 344.3)",
+        "tonalRamp": [
+          "oklch(15% 0.163 344.3)",
+          "oklch(25% 0.163 344.3)",
+          "oklch(35% 0.163 344.3)",
+          "oklch(45% 0.163 344.3)",
+          "oklch(55% 0.163 344.3)",
+          "oklch(65% 0.163 344.3)",
+          "oklch(80% 0.163 344.3)",
+          "oklch(95% 0.163 344.3)"
+        ]
+      },
+      "foil": {
+        "role": "tertiary",
+        "displayName": "Holo Foil",
+        "canonical": "oklch(82.3% 0.112 229.0)",
+        "tonalRamp": [
+          "oklch(15% 0.112 229.0)",
+          "oklch(25% 0.112 229.0)",
+          "oklch(35% 0.112 229.0)",
+          "oklch(45% 0.112 229.0)",
+          "oklch(55% 0.112 229.0)",
+          "oklch(65% 0.112 229.0)",
+          "oklch(80% 0.112 229.0)",
+          "oklch(95% 0.112 229.0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(19.7% 0.051 286.0)",
+        "tonalRamp": [
+          "oklch(15% 0.051 286.0)",
+          "oklch(25% 0.051 286.0)",
+          "oklch(35% 0.051 286.0)",
+          "oklch(45% 0.051 286.0)",
+          "oklch(55% 0.051 286.0)",
+          "oklch(65% 0.051 286.0)",
+          "oklch(80% 0.051 286.0)",
+          "oklch(95% 0.051 286.0)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(36.0% 0.083 287.1)",
+        "tonalRamp": [
+          "oklch(15% 0.083 287.1)",
+          "oklch(25% 0.083 287.1)",
+          "oklch(35% 0.083 287.1)",
+          "oklch(45% 0.083 287.1)",
+          "oklch(55% 0.083 287.1)",
+          "oklch(65% 0.083 287.1)",
+          "oklch(80% 0.083 287.1)",
+          "oklch(95% 0.083 287.1)"
+        ]
+      },
+      "vinyl": {
+        "role": "neutral",
+        "displayName": "Vinyl White",
+        "canonical": "oklch(99.4% 0.009 93.6)",
+        "tonalRamp": [
+          "oklch(15% 0.009 93.6)",
+          "oklch(25% 0.009 93.6)",
+          "oklch(35% 0.009 93.6)",
+          "oklch(45% 0.009 93.6)",
+          "oklch(55% 0.009 93.6)",
+          "oklch(65% 0.009 93.6)",
+          "oklch(80% 0.009 93.6)",
+          "oklch(95% 0.009 93.6)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name only, as die-cut word stickers."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles with one inline tag-word sticker."
+      },
+      "title-script": {
+        "displayName": "Title, script",
+        "purpose": "Company names, clock city, starburst captions, sub-section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project sticker titles; face chosen per sticker."
+      },
+      "sticker-block": {
+        "displayName": "Sticker block",
+        "purpose": "Short shouty stickers: role, stack ribbon, belt stickers."
+      },
+      "label-tape": {
+        "displayName": "Label tape",
+        "purpose": "Label-maker tape headings and items only, uppercase."
+      },
+      "devanagari": {
+        "displayName": "Devanagari",
+        "purpose": "The Hindi name sticker."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running copy; 16px under 760px."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Sticker buttons."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Stack chips, dates, times, versions, commands. Data only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift",
+        "value": "0 1px 1px rgba(20, 17, 43, 0.28), 0 8px 16px -8px rgba(20, 17, 43, 0.55)",
+        "purpose": "Every sticker at rest (--lift)."
+      },
+      {
+        "name": "lift-hi",
+        "value": "0 2px 2px rgba(20, 17, 43, 0.2), 0 22px 34px -12px rgba(20, 17, 43, 0.6)",
+        "purpose": "Hovered, peeled or grabbed stickers (--lift-hi)."
+      },
+      {
+        "name": "chip-lift",
+        "value": "0 1px 1px rgba(20, 17, 43, 0.25), 0 3px 6px -3px rgba(20, 17, 43, 0.4)",
+        "purpose": "Data chips on a sticker."
+      },
+      {
+        "name": "nametag-lift",
+        "value": "0 2px 2px rgba(0, 0, 0, 0.3), 0 26px 40px -18px rgba(0, 0, 0, 0.7)",
+        "purpose": "Name tags on the ink ground."
+      },
+      {
+        "name": "die-cut-drop",
+        "value": "drop-shadow(0 2px 1px rgba(20, 17, 43, 0.3)) drop-shadow(0 14px 18px rgba(20, 17, 43, 0.35))",
+        "purpose": "filter for die-cut words and starbursts."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #14112b; outline-offset: 3px; box-shadow: 0 0 0 7px #ffe03d",
+        "purpose": "Global :focus-visible, ink outline plus yellow halo."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-slap",
+        "value": "cubic-bezier(0.2, 1.5, 0.35, 1)",
+        "purpose": "Intentional overshoot for landings, peel straighten and lift."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Shadow growth, peel curl, unroll."
+      },
+      {
+        "name": "slap",
+        "value": "0.45-0.55s ease-slap; from scale 1.35, opacity 0",
+        "purpose": "Hero load (staggered by --d), project, education and pack-sticker entrances."
+      },
+      {
+        "name": "drop",
+        "value": "0.7s ease-slap; from translate 0 -60px, rotate -9deg, opacity 0",
+        "purpose": "Name-tag reveal."
+      },
+      {
+        "name": "unroll",
+        "value": "0.6s ease-out; clip-path inset(0 100% 0 0) to inset(0)",
+        "purpose": "Label tape reveal."
+      },
+      {
+        "name": "peel",
+        "value": "0.35s ease-slap; rotate 0, scale 1.03, translate 0 -3px, lift-hi; 46px corner curl 0.3s ease-out",
+        "purpose": "Hover on interactive stickers."
+      },
+      {
+        "name": "land",
+        "value": "0.32s ease-slap; scale 1.1 to 1",
+        "purpose": "Release after a drag."
+      },
+      {
+        "name": "belt",
+        "value": "48s / 54s linear infinite, opposite directions, pause on hover",
+        "purpose": "Toolkit sticker belts."
+      },
+      {
+        "name": "foil",
+        "value": "9s linear infinite conic rotation",
+        "purpose": "The single holographic sticker."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition none; reveals visible; belts wrap to six static items",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm-nav",
+        "value": "400px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "lid-toy",
+        "value": "1000px"
+      },
+      {
+        "name": "tablet",
+        "value": "1100px"
+      },
+      {
+        "name": "wrap",
+        "value": "1320px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Sticker Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Tomato pill sticker for the main action (Email me); peels on hover.",
+      "html": "<a class=\"ds-stk ds-btn ds-btn-primary\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"m3 7 9 6 9-6\"/></svg> Email me</a>",
+      "css": ".ds-stk{position:relative;border:5px solid var(--vinyl,#fffdf6);box-shadow:var(--lift,0 1px 1px rgba(20,17,43,.28),0 8px 16px -8px rgba(20,17,43,.55));transition:rotate .35s cubic-bezier(.2,1.5,.35,1),scale .35s cubic-bezier(.2,1.5,.35,1),translate .35s cubic-bezier(.2,1.5,.35,1),box-shadow .35s cubic-bezier(.16,1,.3,1);}.ds-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-family:'Schibsted Grotesk',system-ui,sans-serif;font-weight:900;font-size:19px;color:#14112b;text-decoration:none;cursor:pointer;}.ds-btn-primary{background:#ff5a36;rotate:-2deg;}.ds-btn-primary:hover{rotate:0deg;scale:1.03;translate:0 -3px;box-shadow:0 2px 2px rgba(20,17,43,.2),0 22px 34px -12px rgba(20,17,43,.6);}.ds-btn-primary:active{scale:.97;translate:0 0;}.ds-btn-primary:focus-visible{outline:3px solid #14112b;outline-offset:3px;box-shadow:0 0 0 7px #ffe03d;}"
+    },
+    {
+      "name": "Secondary Sticker Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Yellow pill sticker for Resume and other secondary actions.",
+      "html": "<a class=\"ds-stk ds-btn ds-btn-secondary\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4v11m-5-5 5 5 5-5M5 20h14\"/></svg> Resume</a>",
+      "css": ".ds-stk{position:relative;border:5px solid var(--vinyl,#fffdf6);box-shadow:var(--lift,0 1px 1px rgba(20,17,43,.28),0 8px 16px -8px rgba(20,17,43,.55));transition:rotate .35s cubic-bezier(.2,1.5,.35,1),scale .35s cubic-bezier(.2,1.5,.35,1),translate .35s cubic-bezier(.2,1.5,.35,1),box-shadow .35s cubic-bezier(.16,1,.3,1);}.ds-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-family:'Schibsted Grotesk',system-ui,sans-serif;font-weight:900;font-size:19px;color:#14112b;text-decoration:none;cursor:pointer;}.ds-btn-secondary{background:#ffe03d;rotate:1.5deg;}.ds-btn-secondary:hover{rotate:0deg;scale:1.03;translate:0 -3px;box-shadow:0 2px 2px rgba(20,17,43,.2),0 22px 34px -12px rgba(20,17,43,.6);}.ds-btn-secondary:active{scale:.97;translate:0 0;}.ds-btn-secondary:focus-visible{outline:3px solid #14112b;outline-offset:3px;box-shadow:0 0 0 7px #ffe03d;}"
+    },
+    {
+      "name": "Nav Sticker Strip",
+      "kind": "nav",
+      "refersTo": "nav-sticker",
+      "description": "Fixed strip of small vinyl pill stickers with a yellow Resume sticker last.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-stk ds-nav-i\" href=\"#\">Work</a><a class=\"ds-stk ds-nav-i\" href=\"#\">Jobs</a><a class=\"ds-stk ds-nav-i\" href=\"#\">Contact</a><a class=\"ds-stk ds-nav-i ds-nav-y\" href=\"#\">Resume</a></nav>",
+      "css": ".ds-stk{position:relative;border:5px solid var(--vinyl,#fffdf6);box-shadow:var(--lift,0 1px 1px rgba(20,17,43,.28),0 8px 16px -8px rgba(20,17,43,.55));transition:rotate .35s cubic-bezier(.2,1.5,.35,1),scale .35s cubic-bezier(.2,1.5,.35,1),translate .35s cubic-bezier(.2,1.5,.35,1),box-shadow .35s cubic-bezier(.16,1,.3,1);}.ds-nav{display:flex;gap:10px;padding:18px;background:#2b34e0;}.ds-nav-i{border-width:3px;border-radius:999px;padding:7px 16px;background:#fffdf6;color:#14112b;font-family:'Schibsted Grotesk',system-ui,sans-serif;font-weight:700;font-size:15px;text-decoration:none;}.ds-nav-i:nth-child(odd){rotate:-2deg;}.ds-nav-i:nth-child(even){rotate:1.5deg;}.ds-nav-y{background:#ffe03d;}.ds-nav-i:hover{rotate:0deg;scale:1.03;translate:0 -3px;box-shadow:0 2px 2px rgba(20,17,43,.2),0 22px 34px -12px rgba(20,17,43,.6);}.ds-nav-i:focus-visible{outline:3px solid #14112b;outline-offset:3px;box-shadow:0 0 0 7px #ffe03d;}"
+    },
+    {
+      "name": "Data Chip",
+      "kind": "chip",
+      "refersTo": "chip-data",
+      "description": "Mono stack chip on a sticker; data only.",
+      "html": "<ul class=\"ds-chips\"><li>Next.js</li><li>PostgreSQL</li><li>Go</li></ul>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:16px;background:#3ee08f;}.ds-chips li{font-family:'Martian Mono',ui-monospace,monospace;font-size:11.5px;padding:4px 11px;border-radius:999px;background:#fffdf6;color:#14112b;box-shadow:0 1px 1px rgba(20,17,43,.25),0 3px 6px -3px rgba(20,17,43,.4);}"
+    },
+    {
+      "name": "Project Sticker",
+      "kind": "card",
+      "refersTo": "project-sticker",
+      "description": "Large content sticker with a fact badge, own-face title, mono chips and a peel curl on hover.",
+      "html": "<a class=\"ds-stk ds-proj\" href=\"#\"><span class=\"ds-stk ds-badge\">4.8 Cr+ registrations</span><h3 class=\"ds-proj-t\">Auto Analytics Pro</h3><p class=\"ds-proj-s\">Vehicle registration analytics</p><p class=\"ds-proj-d\">B2B SaaS analytics on India's VAHAN registry.</p></a>",
+      "css": ".ds-stk{position:relative;border:5px solid var(--vinyl,#fffdf6);box-shadow:var(--lift,0 1px 1px rgba(20,17,43,.28),0 8px 16px -8px rgba(20,17,43,.55));transition:rotate .35s cubic-bezier(.2,1.5,.35,1),scale .35s cubic-bezier(.2,1.5,.35,1),translate .35s cubic-bezier(.2,1.5,.35,1),box-shadow .35s cubic-bezier(.16,1,.3,1);}.ds-proj{display:block;max-width:420px;margin:28px 12px 12px;padding:34px 34px 28px;border-width:6px;border-radius:28px;background:#2b34e0;color:#fffdf6;text-decoration:none;rotate:-1.4deg;outline:2px solid rgba(20,17,43,.16);outline-offset:12px;}.ds-proj::after{content:'';position:absolute;right:-6px;bottom:-6px;width:46px;height:46px;border-bottom-right-radius:28px;background:linear-gradient(135deg,#e7e3d6 0 50%,#ffe03d 50% 100%);transform-origin:100% 100%;scale:0;transition:scale .3s cubic-bezier(.16,1,.3,1);}.ds-proj:hover::after{scale:1;}.ds-proj:hover{rotate:0deg;scale:1.03;translate:0 -3px;box-shadow:0 2px 2px rgba(20,17,43,.2),0 22px 34px -12px rgba(20,17,43,.6);}.ds-proj:focus-visible{outline:3px solid #14112b;outline-offset:3px;box-shadow:0 0 0 7px #ffe03d;}.ds-badge{position:absolute;top:-22px;right:22px;rotate:7deg;border-width:4px;border-radius:999px;padding:7px 16px;background:#ffe03d;color:#14112b;font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:14px;}.ds-proj-t{margin:0;font-family:'Bagel Fat One','Arial Rounded MT Bold',sans-serif;font-weight:400;font-size:44px;line-height:1;}.ds-proj-s{margin:8px 0 0;font-family:'Schibsted Grotesk',sans-serif;font-style:italic;font-weight:700;font-size:17px;}.ds-proj-d{margin:14px 0 0;font-family:'Schibsted Grotesk',sans-serif;font-size:16px;line-height:1.55;}"
+    },
+    {
+      "name": "Label-Maker Tape",
+      "kind": "chip",
+      "refersTo": "label-tape",
+      "description": "Embossed uppercase tape for toolkit group headings and items.",
+      "html": "<div class=\"ds-tapes\"><span class=\"ds-dymo\">Backend</span><span class=\"ds-dymo ds-dymo-s\">NestJS</span><span class=\"ds-dymo ds-dymo-s\">Go</span></div>",
+      "css": ".ds-tapes{display:flex;flex-wrap:wrap;gap:10px 8px;align-items:flex-start;padding:18px;background:#3ee08f;}.ds-dymo{display:inline-block;background:#14112b;color:#fffdf6;font-family:'Rubik Mono One','Arial Black',sans-serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px 8px;border-radius:4px;rotate:-1.5deg;box-shadow:0 1px 1px rgba(20,17,43,.28),0 8px 16px -8px rgba(20,17,43,.55);text-shadow:0 1px 0 rgba(0,0,0,.3);}.ds-dymo-s{font-size:12.5px;letter-spacing:.1em;padding:6px 11px 5px;rotate:1deg;}"
+    },
+    {
+      "name": "HELLO Name Tag",
+      "kind": "card",
+      "description": "Experience card: coloured band, HELLO header, Shrikhand company, mono data chips.",
+      "html": "<article class=\"ds-tag\"><header class=\"ds-band\"><span class=\"ds-hello\">Hello</span><span class=\"ds-iwas\">I shipped code at</span></header><div class=\"ds-tag-b\"><h3 class=\"ds-co\">NovoStack</h3><p class=\"ds-td\"><span>SDE 1</span><span>2025 - now</span></p></div><div class=\"ds-bf\"></div></article>",
+      "css": ".ds-tag{max-width:380px;margin:16px;background:#fffdf6;color:#14112b;border-radius:26px;border:6px solid #ff5a36;rotate:-1.8deg;box-shadow:0 2px 2px rgba(0,0,0,.3),0 26px 40px -18px rgba(0,0,0,.7);}.ds-band{background:#ff5a36;color:#14112b;padding:16px 26px 14px;border-radius:18px 18px 0 0;text-align:center;}.ds-hello{display:block;font-family:'Bagel Fat One',sans-serif;font-size:56px;line-height:.95;text-transform:uppercase;letter-spacing:.02em;}.ds-iwas{display:block;font-family:'Schibsted Grotesk',sans-serif;font-weight:900;font-size:17px;margin-top:4px;}.ds-tag-b{padding:30px 32px;}.ds-co{margin:0 0 14px;font-family:Shrikhand,Georgia,serif;font-weight:400;font-size:48px;line-height:1.05;rotate:-2deg;color:#2b34e0;}.ds-td{display:flex;gap:6px;margin:0;}.ds-td span{font-family:'Martian Mono',monospace;font-size:12px;padding:4px 10px;border-radius:999px;background:#14112b;color:#fffdf6;}.ds-td span:first-child{background:#ff5a36;color:#14112b;font-weight:600;}.ds-bf{height:26px;background:#ff5a36;border-radius:0 0 18px 18px;}"
+    },
+    {
+      "name": "Die-Cut Word",
+      "kind": "custom",
+      "description": "Giant display word with a round vinyl outline built from a text-shadow ring.",
+      "html": "<div class=\"ds-lid\"><span class=\"ds-word\">Rohan</span></div>",
+      "css": ".ds-lid{padding:32px;background:#2b34e0;}.ds-word{--cut:.085em;display:inline-block;color:#ffe03d;font-family:'Bagel Fat One','Arial Rounded MT Bold',sans-serif;font-size:96px;line-height:.9;rotate:-4deg;text-shadow:var(--cut) 0 0 #fffdf6,calc(var(--cut)*.707) calc(var(--cut)*.707) 0 #fffdf6,0 var(--cut) 0 #fffdf6,calc(var(--cut)*-.707) calc(var(--cut)*.707) 0 #fffdf6,calc(var(--cut)*-1) 0 0 #fffdf6,calc(var(--cut)*-.707) calc(var(--cut)*-.707) 0 #fffdf6,0 calc(var(--cut)*-1) 0 #fffdf6,calc(var(--cut)*.707) calc(var(--cut)*-.707) 0 #fffdf6,calc(var(--cut)*.5) 0 0 #fffdf6,calc(var(--cut)*-.5) 0 0 #fffdf6,0 calc(var(--cut)*.5) 0 #fffdf6,0 calc(var(--cut)*-.5) 0 #fffdf6;filter:drop-shadow(0 2px 1px rgba(20,17,43,.3)) drop-shadow(0 14px 18px rgba(20,17,43,.35));transition:rotate .35s cubic-bezier(.2,1.5,.35,1);}.ds-word:hover{rotate:0deg;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sticker-Bombed Laptop Lid",
+    "overview": "The whole site is the lid of an engineer's laptop, drenched in ultramarine and covered in die-cut vinyl. Every surface that carries content is a sticker: flat colour, a thick white die-cut edge, a slight tilt, and a crisp lift shadow that says it sits on top of something. Depth comes from overlap and lift, never from gradients or glass. The mood is loud, joyful and hands-on; density is generous, with stickers scattered on the lid and packed on sheets further down.\n\nEach section is a different ground the stickers sit on: the lid (ultramarine), a kiss-cut sticker sheet on a yellow liner, a black ink panel of HELLO name tags, a mint toolkit of label-maker tape, and back to the lid to close. The type case is raided rather than paired: several fat display faces each claim their own sticker, held together by one sturdy grotesk for reading and one mono reserved for data.\n\nThe world rejects the dark, serif-plus-mono developer portfolio with a single accent and hairline rows. It does not borrow neobrutalist hard block shadows: its shadows are soft vinyl lift, offset plus blur.",
+    "keyCharacteristics": [
+      "Ultramarine lid ground; seven vinyl skins, each a colour with a fixed legible text partner.",
+      "White die-cut edge on every sticker (5px default, 3px on small ones, 6-7px on large ones).",
+      "Every sticker is tilted a few degrees and straightens when peeled.",
+      "Soft two-layer lift shadow; a higher lift while hovered or dragged.",
+      "Motion grammar of slap, drop, unroll and peel, all removed under reduced motion.",
+      "Every sticker states one true fact."
+    ],
+    "rules": [
+      {
+        "name": "The Skin Pair Rule",
+        "body": "Every sticker takes a skin, and a skin is a fixed pair of fill and text: lid and ink carry vinyl text; tomato, yellow, mint, pink and vinyl carry ink text. Never set vinyl text on tomato, yellow, mint or pink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Contrast Badge Rule",
+        "body": "A sticker stacked on another sticker takes a skin that contrasts with its host (on lid use yellow, on tomato vinyl, on yellow ink, on mint pink, on pink mint, on ink yellow, on vinyl tomato).",
+        "section": "colors"
+      },
+      {
+        "name": "The One Foil Rule",
+        "body": "The holographic conic sweep (pink, yellow, mint, foil, violet) appears on exactly one sticker per page. It is the only decorative gradient in the system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Data-Only Mono Rule",
+        "body": "Martian Mono carries data (stack names, dates, times, versions, commands) and nothing else. Sentences and instructions are set in Schibsted Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "The Own-Face Rule",
+        "body": "Display faces belong to stickers, not to roles: a sticker may pick any face from the case, but body copy never leaves Schibsted Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "The Vinyl Lift Rule",
+        "body": "Shadows are contact plus blur, tinted ink, and always pair a tight near layer with a soft far one. A shadow with zero blur and a solid offset is not vinyl and does not belong here.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Lift Is State Rule",
+        "body": "Resting stickers use the base lift; only hover, peel and drag earn the high lift.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** give every content surface a skin, a vinyl die-cut edge and a few degrees of tilt (typically -3deg to 7deg).",
+      "**Do** make every sticker state one true fact about Rohan's work (a number, a stack, a place, a date).",
+      "**Do** pair fills with their fixed text colour: vinyl on lid and ink; ink on tomato, yellow, mint, pink and vinyl.",
+      "**Do** use the two lift shadows (base at rest, high on hover, peel and drag) in ink with blur.",
+      "**Do** keep Martian Mono for data: stack chips, dates, times, versions and commands.",
+      "**Do** change the ground per section: lid, yellow kiss-cut liner, ink, mint, lid.",
+      "**Do** run the slap curve cubic-bezier(0.2, 1.5, 0.35, 1) for landings and keep every motion removable under prefers-reduced-motion.",
+      "**Do** focus with the 3px ink outline offset 3px plus the 7px yellow halo."
+    ],
+    "donts": [
+      "**Don't** add eyebrows or kickers above headings; a section opens with its Bagel headline and one tag-word sticker.",
+      "**Don't** use gradients except the single holographic foil sticker and the hard 50/50 split of the peel curl.",
+      "**Don't** use hard offset block shadows or zero-blur shadows; lift is always contact plus blur.",
+      "**Don't** set sentences or instructions in Martian Mono.",
+      "**Don't** put vinyl text on tomato, yellow, mint or pink skins.",
+      "**Don't** add a second holographic sticker.",
+      "**Don't** return to a dark serif-plus-mono layout with one accent and hairline rows.",
+      "**Don't** enable dragging on touch or on screens under 1000px."
+    ]
+  }
+}

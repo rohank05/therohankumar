@@ -1,27 +1,20 @@
-'use client'
-
-import { useLiveTime } from './hooks'
+import { Download } from './Icons'
 
 export default function TopBar() {
-  const time = useLiveTime('Asia/Kolkata')
-
   return (
-    <div className="topbar">
-      <div className="left">
-        <span className="name">RK</span>
-        <span style={{ color: 'var(--fg-low)' }}>/</span>
-        <span>Software Engineer</span>
-      </div>
-      <div className="right">
-        <a href="#work">Work</a>
-        <a href="#experience" className="hide-sm">Experience</a>
-        <a href="#about" className="hide-sm">About</a>
-        <a href="#contact">Contact</a>
-        <span className="status hide-sm">
-          <span className="dot" />
-          <span suppressHydrationWarning>DEL · {time}</span>
-        </span>
-      </div>
-    </div>
+    <header className="topbar">
+      <a href="#top" className="logo" aria-label="Rohan Kumar, back to top">
+        RK
+      </a>
+      <nav aria-label="Sections">
+        <a className="stk nav skin-vinyl" href="#work">Work</a>
+        <a className="stk nav skin-vinyl hide-sm" href="#experience">Jobs</a>
+        <a className="stk nav skin-vinyl hide-sm" href="#toolkit">Toolkit</a>
+        <a className="stk nav skin-vinyl" href="#contact">Contact</a>
+        <a className="stk nav skin-yellow" href="/Rohan_Kumar_Resume.pdf" download>
+          <Download size={16} /> Resume
+        </a>
+      </nav>
+    </header>
   )
 }

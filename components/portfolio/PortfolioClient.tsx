@@ -1,6 +1,6 @@
 'use client'
 
-import { useCursor, useReveal } from './hooks'
+import { useReveal } from './hooks'
 import TopBar from './TopBar'
 import Hero from './Hero'
 import Work from './Work'
@@ -9,11 +9,11 @@ import Skills from './Skills'
 import Contact from './Contact'
 
 export default function PortfolioClient() {
-  useCursor()
   useReveal()
 
   return (
     <>
+      <a className="skip" href="#work">Skip to projects</a>
       <TopBar />
       <main>
         <Hero />
