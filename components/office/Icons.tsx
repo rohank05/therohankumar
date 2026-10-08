@@ -1,4 +1,4 @@
-// One stroke family for every glyph on the lid: 24px grid, 2.25 stroke, round caps
+// One stroke family for every glyph in the office: 24px grid, 2.25 stroke, round caps
 type P = { size?: number; className?: string }
 
 function Svg({ size = 22, className, children }: P & { children: React.ReactNode }) {
@@ -59,15 +59,8 @@ export const Lock = (p: P) => (
   </Svg>
 )
 
-export const Sparkle = (p: P) => (
+export const Close = (p: P) => (
   <Svg {...p}>
-    <path d="M12 3v4m0 10v4M3 12h4m10 0h4M6.3 6.3l2.5 2.5m6.4 6.4 2.5 2.5m0-11.4-2.5 2.5m-6.4 6.4-2.5 2.5" />
-  </Svg>
-)
-
-export const Undo = (p: P) => (
-  <Svg {...p}>
-    <path d="M4 9h11a5 5 0 0 1 0 10H9" />
-    <path d="m8 5-4 4 4 4" />
+    <path d="M6 6l12 12M18 6 6 18" />
   </Svg>
 )

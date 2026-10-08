@@ -9,9 +9,9 @@ export const size = {
 }
 export const contentType = 'image/png'
 
-const lid = '#2B34E0'
-const vinyl = '#FFFDF6'
-const ink = '#14112B'
+const lid = '#3255A4'
+const vinyl = '#F3F4F1'
+const ink = '#1B1F3B'
 
 function Sticker({
   children,
@@ -71,19 +71,19 @@ export default async function Image() {
           background: lid,
         }}
       >
-        <Sticker bg="#FFE03D" rotate={-5} top={70} left={60} radius={36} size={150} pad="0px 40px 10px">
+        <Sticker bg="#FFE800" rotate={-5} top={70} left={60} radius={36} size={150} pad="0px 40px 10px">
           ROHAN
         </Sticker>
-        <Sticker bg="#FF8AD1" rotate={3} top={270} left={170} radius={36} size={150} pad="0px 40px 10px">
+        <Sticker bg="#FF48B0" rotate={3} top={270} left={170} radius={36} size={150} pad="0px 40px 10px">
           KUMAR
         </Sticker>
-        <Sticker bg="#3EE08F" rotate={6} top={70} left={840} size={30}>
+        <Sticker bg="#00A95C" rotate={6} top={70} left={840} size={30}>
           SDE 1 @ NovoStack
         </Sticker>
-        <Sticker bg="#FF5A36" rotate={-4} top={500} left={90} size={30}>
+        <Sticker bg="#FF48B0" rotate={-4} top={500} left={90} size={30}>
           Node · Go · React · Next.js
         </Sticker>
-        <Sticker bg={ink} color="#FFE03D" rotate={-8} top={440} left={820} radius={24} size={30}>
+        <Sticker bg={ink} color="#FFE800" rotate={-8} top={440} left={820} radius={24} size={30}>
           5,000+ npm dl / week
         </Sticker>
         <Sticker bg={vinyl} rotate={4} top={500} left={640} size={26}>

@@ -1,4 +1,4 @@
-import PortfolioClient from '@/components/portfolio/PortfolioClient'
+import OfficeApp from '@/components/office/OfficeApp'
 import { SITE } from '@/lib/site'
 import { SKILLS } from '@/lib/data'
 
@@ -57,7 +57,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
-      <PortfolioClient />
+      <OfficeApp />
     </>
   )
 }

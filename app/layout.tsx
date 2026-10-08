@@ -1,35 +1,24 @@
 import type { Metadata, Viewport } from 'next'
-import {
-  Bagel_Fat_One,
-  Bungee,
-  Martian_Mono,
-  Modak,
-  Rubik_Mono_One,
-  Schibsted_Grotesk,
-  Shrikhand,
-} from 'next/font/google'
+import { Dela_Gothic_One, Familjen_Grotesk, Fragment_Mono, Hind } from 'next/font/google'
 import './globals.css'
 import ClarityInit from '@/components/ClarityInit'
 import { SITE } from '@/lib/site'
 
-// A raided type case: every sticker picks its own face
-const bagel = Bagel_Fat_One({ subsets: ['latin'], weight: '400', variable: '--font-bagel', display: 'swap' })
-const shrikhand = Shrikhand({ subsets: ['latin'], weight: '400', variable: '--font-shrikhand', display: 'swap' })
-const bungee = Bungee({ subsets: ['latin'], weight: '400', variable: '--font-bungee', display: 'swap', preload: false })
-const rubik = Rubik_Mono_One({ subsets: ['latin'], weight: '400', variable: '--font-rubik', display: 'swap', preload: false })
-const modak = Modak({ subsets: ['devanagari'], weight: '400', variable: '--font-modak', display: 'swap', preload: false })
-const schibsted = Schibsted_Grotesk({
+// Riso type case: a fat gothic for the print, a grotesk for reading, a mono for data
+const dela = Dela_Gothic_One({ subsets: ['latin'], weight: '400', variable: '--font-display', display: 'swap' })
+const familjen = Familjen_Grotesk({
   subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
+  weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-sans',
   display: 'swap',
 })
-const martian = Martian_Mono({ subsets: ['latin'], weight: ['400', '600'], variable: '--font-mono', display: 'swap' })
+const fragment = Fragment_Mono({ subsets: ['latin'], weight: '400', variable: '--font-mono', display: 'swap' })
+const hind = Hind({ subsets: ['devanagari'], weight: '700', variable: '--font-deva', display: 'swap', preload: false })
 
-const fontVars = [bagel, shrikhand, bungee, rubik, modak, schibsted, martian].map((f) => f.variable).join(' ')
+const fontVars = [dela, familjen, fragment, hind].map((f) => f.variable).join(' ')
 
-export const viewport: Viewport = { themeColor: '#2B34E0' }
+export const viewport: Viewport = { themeColor: '#3255A4' }
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),

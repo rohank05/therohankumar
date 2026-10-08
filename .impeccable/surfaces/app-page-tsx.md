@@ -5,22 +5,20 @@ primary_target: "app/page.tsx"
 related_targets: []
 ---
 
-# Surface: portfolio home (/)
+# Surface: home (app/page.tsx)
 
-Scope: the single-page portfolio at `/` plus its OG/Twitter images. Mode: Experience (the lid is the work; recruiters are the visitors).
-Audience: recruiters and hiring managers skimming many portfolios. Action: email mail@therohankumar.com or download the resume. Proof: real projects, real numbers from lib/data.ts. Constraints: keep all content, keep Clarity; drop iframe previews and the phone number.
-Memorable moment: the visitor peels, drags and slaps stickers on Rohan's lid, and the lid remembers.
+Mode: Experience. Audience: recruiters and hiring managers, often on phones, skimming. Job: remember Rohan, then email him or download the resume. Constraint: all content in lib/data.ts stays reachable without playing (via the directory and the semantic DOM). Real 3D (three.js via react-three-fiber), lazy-loaded; reduced motion means no walking and no camera flights.
 
 ## Direction contract
 
-THESIS: Rohan's career as the sticker-bombed laptop lid engineers curate; every project, job and stat is a die-cut vinyl sticker stating one true fact. Refuses the dark serif-plus-mono dev portfolio with one accent and hairline rows.
+THESIS: A real 3D office floor where each department holds one part of the career. The character walks to a room and a riso-printed file opens. It refuses both the scrolling-sections portfolio and the pastel low-poly diorama.
 
-OWN-WORLD: Drenched ultramarine lid (#2B34E0) with tomato, acid yellow, mint, pink, ink and vinyl white. Stickers have white die-cut borders, flat colour, depth from overlap and a crisp vinyl lift shadow, and one holographic foil. A raided type case: Bagel Fat One, Shrikhand, Bungee, Modak (Devanagari), Rubik Mono One, with Schibsted Grotesk for body and Martian Mono for data only. Label-maker tape, HELLO-my-name-is tags, and a kiss-cut sticker sheet on a yellow liner.
+OWN-WORLD: Printed in Riso inks. Medium Blue #3255A4 floods the void, each of the six rooms takes its own stock Riso ink (Yellow, Aqua, Orange, Green, Purple, deep Teal), so six departments read as six keys, on cool white stock, and Ink #1B1F3B carries linework. Shading is halftone dots, not gradients, and edges sit slightly out of register. Fluorescent pink is reserved for the character and the active room. Files are stapled zine sheets with grain and an overprinted stamp.
 
-STORY: The visitor sees a loud, joyful lid and learns within seconds this is Rohan Kumar, a full-stack engineer at NovoStack. They play with the stickers, scan projects on the sticker sheet and read the two jobs on name-tags. Then they email him or grab the resume.
+STORY: Arrive in Reception and see who Rohan is. Choose a department from the directory or click a room. Watch the walk along the printed route line, read the file, then reach Mailroom actions (email, resume) in one click from anywhere.
 
-FIRST VIEWPORT: The full-bleed ultramarine lid. ROHAN in yellow and KUMAR in pink, as giant die-cut word stickers, fill the left 70%. The intro sits on a white label sticker below the name. Fact stickers are scattered around it (NovoStack role, holo 5,000+/wk npm, live Delhi clock, रोहन, stack ribbon, 'available' starburst). The primary action is a tomato 'Email me' sticker button plus a yellow 'Resume' sticker, bottom left. Nav is a strip of small label stickers at the top.
+FIRST VIEWPORT: The blue flood fills the screen, with a huge overprinted ROHAN KUMAR at top-left over the floor. The six-room floor plate sits at three-quarter top-down, centre-right. A directory strip runs along the left edge (bottom on phones), with Email and Resume always pinned.
 
-FORM: Sticker-Bombed Laptop Lid, position 3 on my ordered list, seed key 3355daca. Signature interaction: drag to re-slap any hero sticker, click empty lid to slap a new one from the pack, persisted in localStorage, with a reset. Motion grammar: the slap, where a sticker lands from scale 1.25 with a small overshoot, and the peel, where a hovered sticker lifts, straightens and grows its shadow.
+FORM: 3D office diorama in Riso print, #4 of seven. Seed c33a0d53. Signature interaction: select a room, the lit "you are here" key travels along the directory, the character walks the route, and the file slaps open over the scene.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
